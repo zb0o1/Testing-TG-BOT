@@ -1,3 +1,4 @@
+from modules.broadcast import broadcast_handler
 from telegram import InlineKeyboardButton, InlineKeyboardMarkup, Update, ParseMode
 from telegram.ext import Updater, CommandHandler, MessageHandler, Filters, CallbackContext
 import config
