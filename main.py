@@ -93,6 +93,7 @@ def main():
     updater = Updater(config.BOT_TOKEN)
     dp = updater.dispatcher
 
+    dp.add_handler(CommandHandler("broadcast", broadcast_handler))
     dp.add_handler(CommandHandler("start", start))
     dp.add_handler(CommandHandler("setwelcome", set_welcome))
     dp.add_handler(MessageHandler(Filters.status_update.new_chat_members, on_added))
