@@ -39,5 +39,8 @@ class Database:
     def set_rules(self, chat_id, text):
         self.cursor.execute("UPDATE groups SET rules=? WHERE chat_id=?", (text, chat_id))
         self.conn.commit()
-
+        
+    def get_all_groups(self):
+    self.cursor.execute("SELECT chat_id FROM groups")
+    return self.cursor.fetchall()
 db = Database()
